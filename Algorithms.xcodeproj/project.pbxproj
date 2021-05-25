@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235A8B7C265CC5FF006DE6AE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 235A8B7B265CC5FF006DE6AE /* main.cpp */; };
 		BF4220161FBD887B0048389F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF4220061FBD886F0048389F /* main.cpp */; };
 		BF4220171FBD887F0048389F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF42200B1FBD886F0048389F /* main.cpp */; };
 		BF4220181FBD88840048389F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF4220031FBD886F0048389F /* main.cpp */; };
@@ -20,6 +21,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		235A8B77265CC5FF006DE6AE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		BF00852C1FB1977500D63C83 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,6 +123,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		235A8B79265CC5FF006DE6AE /* huawei */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = huawei; sourceTree = BUILT_PRODUCTS_DIR; };
+		235A8B7B265CC5FF006DE6AE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BF0085301FB1977500D63C83 /* MST */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MST; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0BBB1B1F95F99800E89F6C /* BinaryTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryTree; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0BBB301F96058E00E89F6C /* HuffmanTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HuffmanTree; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +152,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		235A8B76265CC5FF006DE6AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF00852B1FB1977500D63C83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +232,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		235A8B7A265CC5FF006DE6AE /* huawei */ = {
+			isa = PBXGroup;
+			children = (
+				235A8B7B265CC5FF006DE6AE /* main.cpp */,
+			);
+			path = huawei;
+			sourceTree = "<group>";
+		};
 		BF0BBB121F95F99800E89F6C = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +253,7 @@
 				BF42200E1FBD886F0048389F /* Greedy */,
 				BF4220001FBD886F0048389F /* Sort */,
 				BF42201F1FBD9DB80048389F /* Astar */,
+				235A8B7A265CC5FF006DE6AE /* huawei */,
 				BF0BBB1C1F95F99800E89F6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -243,6 +271,7 @@
 				BF421FF11FBBE96C0048389F /* Greedy */,
 				BF421FFD1FBC220E0048389F /* Sort */,
 				BF4220291FBD9DC00048389F /* Astar */,
+				235A8B79265CC5FF006DE6AE /* huawei */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,6 +363,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		235A8B78265CC5FF006DE6AE /* huawei */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 235A8B7F265CC5FF006DE6AE /* Build configuration list for PBXNativeTarget "huawei" */;
+			buildPhases = (
+				235A8B75265CC5FF006DE6AE /* Sources */,
+				235A8B76265CC5FF006DE6AE /* Frameworks */,
+				235A8B77265CC5FF006DE6AE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = huawei;
+			productName = huawei;
+			productReference = 235A8B79265CC5FF006DE6AE /* huawei */;
+			productType = "com.apple.product-type.tool";
+		};
 		BF0085281FB1977500D63C83 /* MST */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF00852D1FB1977500D63C83 /* Build configuration list for PBXNativeTarget "MST" */;
@@ -513,6 +559,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = vincent;
 				TargetAttributes = {
+					235A8B78265CC5FF006DE6AE = {
+						CreatedOnToolsVersion = 12.4;
+						ProvisioningStyle = Automatic;
+					};
 					BF0085281FB1977500D63C83 = {
 						ProvisioningStyle = Automatic;
 					};
@@ -568,11 +618,20 @@
 				BF421FE91FBBE96C0048389F /* Greedy */,
 				BF421FF51FBC220E0048389F /* Sort */,
 				BF4220211FBD9DC00048389F /* Astar */,
+				235A8B78265CC5FF006DE6AE /* huawei */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		235A8B75265CC5FF006DE6AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				235A8B7C265CC5FF006DE6AE /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF0085291FB1977500D63C83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -656,6 +715,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		235A8B7D265CC5FF006DE6AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8S25DFPZ4T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		235A8B7E265CC5FF006DE6AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8S25DFPZ4T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		BF00852E1FB1977500D63C83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -942,6 +1034,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		235A8B7F265CC5FF006DE6AE /* Build configuration list for PBXNativeTarget "huawei" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				235A8B7D265CC5FF006DE6AE /* Debug */,
+				235A8B7E265CC5FF006DE6AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BF00852D1FB1977500D63C83 /* Build configuration list for PBXNativeTarget "MST" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
