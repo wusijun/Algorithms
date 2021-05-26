@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		235A8B7C265CC5FF006DE6AE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 235A8B7B265CC5FF006DE6AE /* main.cpp */; };
+		23602626265D53C600A34AFB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23602625265D53C600A34AFB /* main.cpp */; };
 		BF4220161FBD887B0048389F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF4220061FBD886F0048389F /* main.cpp */; };
 		BF4220171FBD887F0048389F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF42200B1FBD886F0048389F /* main.cpp */; };
 		BF4220181FBD88840048389F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF4220031FBD886F0048389F /* main.cpp */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		235A8B77265CC5FF006DE6AE /* CopyFiles */ = {
+		23602621265D53C600A34AFB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -123,8 +123,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		235A8B79265CC5FF006DE6AE /* huawei */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = huawei; sourceTree = BUILT_PRODUCTS_DIR; };
-		235A8B7B265CC5FF006DE6AE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		23602623265D53C600A34AFB /* NiuGuestExercise */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NiuGuestExercise; sourceTree = BUILT_PRODUCTS_DIR; };
+		23602625265D53C600A34AFB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BF0085301FB1977500D63C83 /* MST */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MST; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0BBB1B1F95F99800E89F6C /* BinaryTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryTree; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0BBB301F96058E00E89F6C /* HuffmanTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HuffmanTree; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +152,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		235A8B76265CC5FF006DE6AE /* Frameworks */ = {
+		23602620265D53C600A34AFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,12 +232,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		235A8B7A265CC5FF006DE6AE /* huawei */ = {
+		23602624265D53C600A34AFB /* NiuGuestExercise */ = {
 			isa = PBXGroup;
 			children = (
-				235A8B7B265CC5FF006DE6AE /* main.cpp */,
+				23602625265D53C600A34AFB /* main.cpp */,
 			);
-			path = huawei;
+			path = NiuGuestExercise;
 			sourceTree = "<group>";
 		};
 		BF0BBB121F95F99800E89F6C = {
@@ -253,7 +253,7 @@
 				BF42200E1FBD886F0048389F /* Greedy */,
 				BF4220001FBD886F0048389F /* Sort */,
 				BF42201F1FBD9DB80048389F /* Astar */,
-				235A8B7A265CC5FF006DE6AE /* huawei */,
+				23602624265D53C600A34AFB /* NiuGuestExercise */,
 				BF0BBB1C1F95F99800E89F6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 				BF421FF11FBBE96C0048389F /* Greedy */,
 				BF421FFD1FBC220E0048389F /* Sort */,
 				BF4220291FBD9DC00048389F /* Astar */,
-				235A8B79265CC5FF006DE6AE /* huawei */,
+				23602623265D53C600A34AFB /* NiuGuestExercise */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -363,21 +363,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		235A8B78265CC5FF006DE6AE /* huawei */ = {
+		23602622265D53C600A34AFB /* NiuGuestExercise */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 235A8B7F265CC5FF006DE6AE /* Build configuration list for PBXNativeTarget "huawei" */;
+			buildConfigurationList = 23602629265D53C600A34AFB /* Build configuration list for PBXNativeTarget "NiuGuestExercise" */;
 			buildPhases = (
-				235A8B75265CC5FF006DE6AE /* Sources */,
-				235A8B76265CC5FF006DE6AE /* Frameworks */,
-				235A8B77265CC5FF006DE6AE /* CopyFiles */,
+				2360261F265D53C600A34AFB /* Sources */,
+				23602620265D53C600A34AFB /* Frameworks */,
+				23602621265D53C600A34AFB /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = huawei;
-			productName = huawei;
-			productReference = 235A8B79265CC5FF006DE6AE /* huawei */;
+			name = NiuGuestExercise;
+			productName = NiuGuestExercise;
+			productReference = 23602623265D53C600A34AFB /* NiuGuestExercise */;
 			productType = "com.apple.product-type.tool";
 		};
 		BF0085281FB1977500D63C83 /* MST */ = {
@@ -559,8 +559,8 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = vincent;
 				TargetAttributes = {
-					235A8B78265CC5FF006DE6AE = {
-						CreatedOnToolsVersion = 12.4;
+					23602622265D53C600A34AFB = {
+						CreatedOnToolsVersion = 12.5;
 						ProvisioningStyle = Automatic;
 					};
 					BF0085281FB1977500D63C83 = {
@@ -618,17 +618,17 @@
 				BF421FE91FBBE96C0048389F /* Greedy */,
 				BF421FF51FBC220E0048389F /* Sort */,
 				BF4220211FBD9DC00048389F /* Astar */,
-				235A8B78265CC5FF006DE6AE /* huawei */,
+				23602622265D53C600A34AFB /* NiuGuestExercise */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		235A8B75265CC5FF006DE6AE /* Sources */ = {
+		2360261F265D53C600A34AFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				235A8B7C265CC5FF006DE6AE /* main.cpp in Sources */,
+				23602626265D53C600A34AFB /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,7 +715,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		235A8B7D265CC5FF006DE6AE /* Debug */ = {
+		23602627265D53C600A34AFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -723,16 +723,14 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8S25DFPZ4T;
-				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		235A8B7E265CC5FF006DE6AE /* Release */ = {
+		23602628265D53C600A34AFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -740,9 +738,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8S25DFPZ4T;
-				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1034,11 +1030,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		235A8B7F265CC5FF006DE6AE /* Build configuration list for PBXNativeTarget "huawei" */ = {
+		23602629265D53C600A34AFB /* Build configuration list for PBXNativeTarget "NiuGuestExercise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				235A8B7D265CC5FF006DE6AE /* Debug */,
-				235A8B7E265CC5FF006DE6AE /* Release */,
+				23602627265D53C600A34AFB /* Debug */,
+				23602628265D53C600A34AFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
