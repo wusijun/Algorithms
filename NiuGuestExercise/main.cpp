@@ -26,41 +26,36 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     string temp;
-    cin >> noskipws >>temp;
-    vector<char> strVector;
-    int j = 0;
-    string last;
-    for (int i = 0; i<temp.size(); i++)
+    while (getline(cin,temp))
     {
-//        strVector.push_back(temp[i]);
-        if (!isspace(temp[i]))
+        int j = 0;
+        string last;
+        for (int i = 0; i<temp.size(); i++)
         {
-            j++;
-            cout<<temp[i];
-            last+=temp[i];
-            if (j >= 8)
-            {
-                cout<<endl;
-                j = 0;
-                last = "";
-            }
+            char c = temp[i];
             
+            if (!isspace(c))
+            {
+                j++;
+                cout<<temp[i];
+                last+=temp[i];
+                if (j >= 8)
+                {
+                    cout<<endl;
+                    j = 0;
+                    last = "";
+                }
+                
+            }
         }
-        
-        
-    }
-    if (last.size()<8)
-    {
-        for (int m = 0; m<(8-last.size()); m++)
+        if (last.size()<8)
         {
-            cout<<"0";
+            for (int m = 0; m<(8-last.size()); m++)
+            {
+                cout<<"0";
+            }
         }
+        cout<<endl;
     }
-    cout<<endl;
-//
-//    for(int i=0;i<strVector.size();i++)
-//    {
-//        cout<<strVector[i]<<endl;
-//    }
     return 0;
 }
