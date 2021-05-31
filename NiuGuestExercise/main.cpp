@@ -12,6 +12,7 @@
 #include <string.h>
 #include <algorithm>
 #include <ctype.h>
+#include <cmath>
 using namespace std;
 //•连续输入字符串，请按长度为8拆分每个字符串后输出到新的字符串数组；
 //•长度不是8整数倍的字符串请在后面补数字0，空字符串不处理。
@@ -63,18 +64,8 @@ void stringDeal (void)
     }
 }
 
-
-
-//描述
-//写出一个程序，接受一个十六进制的数，输出该数值的十进制表示。
-//
-//输入描述：
-//输入一个十六进制的数值字符串。注意：一个用例会同时有多组输入数据，请参考帖子https://www.nowcoder.com/discuss/276处理多组输入的问题。
-//
-//输出描述：
-//输出该数值的十进制字符串。不同组的测试用例用\n隔开。
-
-int main(int argc, const char * argv[]) {
+void convertHex16 (void)
+{
     string temp;
     vector<char> legal = {'1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F','a','b','c','d','e','f','x','X'};
     while (getline(cin, temp))
@@ -90,7 +81,7 @@ int main(int argc, const char * argv[]) {
                 break;
             }
             
-            if (i == 1 && (c!= 'x' || c!= 'X'))
+            if (i == 1 && (c!= 'x'))
             {
                 isLegal = false;
                 break;
@@ -102,25 +93,100 @@ int main(int argc, const char * argv[]) {
                 break;
             }
         }
-        long number = 0;
         if (isLegal)
         {
             if (temp.size()>2)
             {
                 string numberStr = temp.substr(2);
-                for (long i = numberStr.size()-1; i>=0; i++)
+                long sum = 0;
+                long size = numberStr.size();
+                for (int i = 0; i<size; i++)
                 {
-                    char n = numberStr[i];
+                    char n = numberStr[size - i - 1];
                     int number = 0;
                     if (n == 'a' || n == 'A')
                     {
-                        n = 10;
+                        number = 10;
                     }
-                    number += (i*16)*numberStr[i];
+                    else if (n == 'b' || n == 'B')
+                    {
+                        number = 11;
+                    }
+                    else if (n == 'c' || n == 'C')
+                    {
+                        number = 12;
+                    }
+                    else if (n == 'd' || n == 'D')
+                    {
+                        number = 13;
+                    }
+                    else if (n == 'e' || n == 'E')
+                    {
+                        number = 14;
+                    }
+                    else if (n == 'f' || n == 'F')
+                    {
+                        number = 15;
+                    }
+                    else
+                    {
+                        number = (int)n-(int)('0');
+                    }
+                    sum += number*(pow(16,i));
+                    
                 }
+                cout << sum << endl;
+            }
+            else
+            {
+                
             }
             
         }
+    }
+}
+
+
+//功能:输入一个正整数，按照从小到大的顺序输出它的所有质因子（重复的也要列举）（如180的质因子为2 2 3 3 5 ）
+//最后一个数后面也要有空格
+void fprimeNumber (void)
+{
+    long number;
+    while (cin>>number)
+    {
+        for (int i = 2; i<=sqrt(number); i++)
+        {
+            while (number%i == 0)
+            {
+                number /= i;
+                cout<< i << ' ';
+            }
+        }
+        if (number>1) cout << number << ' ';
+        cout << endl;
+    }
+}
+
+int roundingOff (float f)
+{
+    return int(f);
+}
+
+
+//描述
+//写出一个程序，接受一个十六进制的数，输出该数值的十进制表示。
+//
+//输入描述：
+//输入一个十六进制的数值字符串。注意：一个用例会同时有多组输入数据，请参考帖子https://www.nowcoder.com/discuss/276处理多组输入的问题。
+//
+//输出描述：
+//输出该数值的十进制字符串。不同组的测试用例用\n隔开。
+
+int main(int argc, const char * argv[]) {
+    float i;
+    while (cin>>i)
+    {
+        cout << round(i) <<endl;
     }
     return 0;
 }
