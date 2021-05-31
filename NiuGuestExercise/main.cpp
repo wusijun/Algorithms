@@ -23,39 +23,104 @@ using namespace std;
 //abc00000
 //12345678
 //90000000
-
-int main(int argc, const char * argv[]) {
+void stringDeal (void)
+{
     string temp;
     while (getline(cin,temp))
     {
-        int j = 0;
-        string last;
+        string last = "";
         for (int i = 0; i<temp.size(); i++)
         {
             char c = temp[i];
-            
+            // 先去掉空格
             if (!isspace(c))
             {
-                j++;
-                cout<<temp[i];
-                last+=temp[i];
-                if (j >= 8)
-                {
-                    cout<<endl;
-                    j = 0;
-                    last = "";
-                }
-                
+                last+=c;
             }
+            
         }
-        if (last.size()<8)
+        
+        int number = last.size()%8;
+        if (number == 0)
         {
-            for (int m = 0; m<(8-last.size()); m++)
-            {
-                cout<<"0";
-            }
+            number = 0;
+        }
+        else
+        {
+            number = 8 - number;
+        }
+        
+        for (int j = 0; j<number; j++)
+        {
+            last+='0';
+        }
+        
+        for (int k = 0; k<last.size()/8; k++)
+        {
+            cout<< last.substr(k*8,8) << endl;
         }
         cout<<endl;
+    }
+}
+
+
+
+//描述
+//写出一个程序，接受一个十六进制的数，输出该数值的十进制表示。
+//
+//输入描述：
+//输入一个十六进制的数值字符串。注意：一个用例会同时有多组输入数据，请参考帖子https://www.nowcoder.com/discuss/276处理多组输入的问题。
+//
+//输出描述：
+//输出该数值的十进制字符串。不同组的测试用例用\n隔开。
+
+int main(int argc, const char * argv[]) {
+    string temp;
+    vector<char> legal = {'1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F','a','b','c','d','e','f','x','X'};
+    while (getline(cin, temp))
+    {
+        // 先合法
+        bool isLegal = true;
+        for (int i = 0; i<temp.size(); i++)
+        {
+            char c = temp[i];
+            if (i == 0 && c != '0')
+            {
+                isLegal = false;
+                break;
+            }
+            
+            if (i == 1 && (c!= 'x' || c!= 'X'))
+            {
+                isLegal = false;
+                break;
+            }
+            
+            if (!count(legal.begin(), legal.end(), c))
+            {
+                isLegal = false;
+                break;
+            }
+        }
+        long number = 0;
+        if (isLegal)
+        {
+            if (temp.size()>2)
+            {
+                string numberStr = temp.substr(2);
+                for (long i = numberStr.size()-1; i>=0; i++)
+                {
+                    char n = numberStr[i];
+                    int number = 0;
+                    if (n == 'a' || n == 'A')
+                    {
+                        n = 10;
+                    }
+                    number += (i*16)*numberStr[i];
+                }
+            }
+            
+        }
     }
     return 0;
 }
