@@ -9,7 +9,7 @@
 #include <iostream>
 #include </usr/local/include/bits/stdc++.h>
 #include <vector>
-#include <string.h>
+#include <string>
 #include <algorithm>
 #include <ctype.h>
 #include <cmath>
@@ -64,6 +64,15 @@ void stringDeal (void)
     }
 }
 
+
+//描述
+//写出一个程序，接受一个十六进制的数，输出该数值的十进制表示。
+//
+//输入描述：
+//输入一个十六进制的数值字符串。注意：一个用例会同时有多组输入数据，请参考帖子https://www.nowcoder.com/discuss/276处理多组输入的问题。
+//
+//输出描述：
+//输出该数值的十进制字符串。不同组的测试用例用\n隔开。
 void convertHex16 (void)
 {
     string temp;
@@ -169,24 +178,59 @@ void fprimeNumber (void)
 
 int roundingOff (float f)
 {
-    return int(f);
+    return round(f);
 }
 
 
 //描述
-//写出一个程序，接受一个十六进制的数，输出该数值的十进制表示。
 //
+//数据表记录包含表索引和数值（int范围的正整数），请对表索引相同的记录进行合并，即将相同索引的数值进行求和运算，输出按照key值升序进行输出。
 //输入描述：
-//输入一个十六进制的数值字符串。注意：一个用例会同时有多组输入数据，请参考帖子https://www.nowcoder.com/discuss/276处理多组输入的问题。
 //
+//先输入键值对的个数
+//然后输入成对的index和value值，以空格隔开
 //输出描述：
-//输出该数值的十进制字符串。不同组的测试用例用\n隔开。
+//
+//输出合并后的键值对（多行）
+void combine (void)
+{
+    
+    int N;
+    cin >> N; // 输入键值对的个数
+    int sum[1000] = {0};
+    int index, value;
+
+    for(int i = 0; i < N; ++i)
+    {
+        cin >> index >> value;
+        sum[index] = sum[index] + value;
+    }
+    for(int i = 0; i < 1000; ++i)
+    {
+        if(sum[i] != 0)
+        {
+            cout << i << " " << sum[i] << endl;
+        }
+    }
+}
 
 int main(int argc, const char * argv[]) {
-    float i;
-    while (cin>>i)
+    
+    string number = "";
+    cin >> number;
+    string priStr;
+    unsigned long length = number.size();
+    for (long i = length-1; i>=0; i--)
     {
-        cout << round(i) <<endl;
+        string a = number.substr(i,1);
+        __SIZE_TYPE__ index = priStr.find(a);
+        if (index == string::npos)
+        {
+            priStr+=a;
+        }
     }
+    
+    cout<<priStr<<endl;
+    
     return 0;
 }
